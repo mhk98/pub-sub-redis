@@ -28,7 +28,7 @@ app.get("/publish", async(req, res) => {
     id,
     message: `message ${id}`
    }
-
+console.log('Publish data', data)
    await publisher.publish('message', JSON.stringify(data))
 
    res.send({
@@ -40,5 +40,5 @@ app.get("/publish", async(req, res) => {
 
 
 app.listen(3001, () => {
-    console.log("Publisher server start on 3000");
+    console.log("Publisher server start on 3001");
 })
